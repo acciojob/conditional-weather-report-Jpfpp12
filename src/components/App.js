@@ -1,13 +1,20 @@
+import React, { useState, useEffect } from 'react';
+import WeatherDisplay from './WeatherDisplay';
 
-import React from "react";
-import './../styles/App.css';
+function App() {
+  const [weather, setWeather] = useState({ temperature: 25, conditions: 'Sunny' });
 
-const App = () => {
+  useEffect(() => {
+    // Simulating fetch or future dynamic update
+    setWeather({ temperature: 25, conditions: 'Sunny' });
+  }, []);
+
   return (
     <div>
-        {/* Do not remove the main div */}
+         {/* Do not remove the main div */}
+      <WeatherDisplay weather={weather} />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
