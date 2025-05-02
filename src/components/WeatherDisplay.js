@@ -1,8 +1,4 @@
 function WeatherDisplay({ weather }) {
-  if (!weather || typeof weather.temperature !== "number") {
-    return <p>Loading weather...</p>;
-  }
-
   const temperatureStyle = {
     color: weather.temperature > 20 ? "red" : "blue",
   };
