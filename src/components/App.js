@@ -3,13 +3,12 @@ import WeatherDisplay from "./WeatherDisplay";
 
 function App() {
   const [weather, setWeather] = useState({
-    temperature: 25,
-    conditions: "Sunny",
-  });
-
+  temperature: 25,
+  conditions: "Sunny",
+});
   return (
     <div>
-      <WeatherDisplay weather={weather} />
+<WeatherDisplay weather={weather} />
     </div>
   );
 }
