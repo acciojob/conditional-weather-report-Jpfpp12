@@ -1,36 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import WeatherDisplay from './WeatherDisplay';
+import React, { useState } from "react";
+import WeatherDisplay from "./WeatherDisplay";
 
 function App() {
-const [weather, setWeather] = useState({
-temperature: null,
-conditions: null
-});
+  const [weather, setWeather] = useState({
+    temperature: 25,
+    conditions: "Sunny",
+  });
 
-useEffect(() => {
-const fetchWeather = () => {
-setTimeout(() => {
-setWeather({
-temperature: 28,
-conditions: "Partly Cloudy"
-});
-}, 2000);
-};
-
-fetchWeather();
-}, []);
-return (
-<div>
-{weather.temperature !== null && weather.conditions ? (
-<WeatherDisplay
-temperature={weather.temperature}
-conditions={weather.conditions}
-/>
-) : (
-<p>Loading weather data…</p>
-)}
-</div>
-);
+  return (
+    <div>
+      <WeatherDisplay weather={weather} />
+    </div>
+  );
 }
 
 export default App;
