@@ -1,6 +1,8 @@
-import React from "react";
-
 function WeatherDisplay({ weather }) {
+  if (!weather || typeof weather.temperature !== "number") {
+    return <p>Loading weather...</p>;
+  }
+
   const temperatureStyle = {
     color: weather.temperature > 20 ? "red" : "blue",
   };
@@ -15,5 +17,3 @@ function WeatherDisplay({ weather }) {
     </div>
   );
 }
-
-export default WeatherDisplay;
