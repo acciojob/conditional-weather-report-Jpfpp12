@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from ‘react’;
-import WeatherDisplay from ‘./WeatherDisplay’;
+import React, { useState, useEffect } from 'react';
+import WeatherDisplay from './WeatherDisplay';
 
 function App() {
 const [weather, setWeather] = useState({
@@ -12,7 +12,7 @@ const fetchWeather = () => {
 setTimeout(() => {
 setWeather({
 temperature: 28,
-conditions: “Partly Cloudy”
+conditions: "Partly Cloudy"
 });
 }, 2000);
 };
