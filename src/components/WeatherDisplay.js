@@ -13,3 +13,4 @@ function WeatherDisplay({ weather }) {
     </div>
   );
 }
+export default WeatherDisplay;
